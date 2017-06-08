@@ -3,6 +3,11 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: [ :show, :edit, :update, :destroy ]
 
   def index
+    @exercises = current_user.exercises
+  end
+
+  def show
+    @exercise = current_user.exercises.find params[:id]
   end
 
   def new
@@ -18,9 +23,6 @@ class ExercisesController < ApplicationController
       flash.now[:danger] = "Exercise has not been created"
       render :new
     end
-  end
-
-  def show
   end
 
 
