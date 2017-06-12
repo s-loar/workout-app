@@ -27,6 +27,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # Use jquery UI
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+# Use D3 for charting
+gem 'd3-rails', '~> 4.1.0'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

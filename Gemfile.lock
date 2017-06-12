@@ -77,6 +77,8 @@ GEM
     cucumber-core (1.5.0)
       gherkin (~> 4.0)
     cucumber-wire (0.0.1)
+    d3-rails (4.1.0)
+      railties (>= 3.1)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -253,6 +255,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.14)
   coffee-rails (~> 4.2)
+  d3-rails (~> 4.1.0)
   devise (~> 4.3)
   guard (~> 2.14, >= 2.14.1)
   guard-cucumber (~> 2.1, >= 2.1.2)
