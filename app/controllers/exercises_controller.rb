@@ -40,7 +40,7 @@ class ExercisesController < ApplicationController
   def destroy
     if @exercise.destroy
       flash[:success] = "Exercise has been deleted."
-      redirect_to index_path
+      redirect_to user_exercises_path(current_user)
     end
   end
 
