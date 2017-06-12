@@ -9,6 +9,9 @@ class ExercisesController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def new
     @exercise = current_user.exercises.new
   end
@@ -22,6 +25,9 @@ class ExercisesController < ApplicationController
       flash.now[:danger] = "Exercise has not been created"
       render :new
     end
+  end
+
+  def update
   end
 
 
