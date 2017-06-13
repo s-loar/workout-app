@@ -27,7 +27,9 @@ RSpec.feature "Signing Up Users" do
     fill_in "Password", with: ""
     fill_in "Password confirmation", with: ""
     click_button "Sign up"
-    expect(page).to have_content("2 errors prohibited this user from being saved")
+    expect(page).to have_content("4 errors prohibited this user from being saved")
+    expect(page).to have_content("First name can't be blank")
+    expect(page).to have_content("Last name can't be blank")
     # expect(page.current_path).to eq(articles_path)
   end
 
