@@ -10,6 +10,8 @@ RSpec.feature "Searching for Users" do
   scenario "using last name to find multiple members" do
     visit "/"
     fill_in "search_name", with: "Doe"
+    click_button "Search"
+    
     expect(page).to have_content(@john.full_name)
     expect(page).to have_content(@sarah.full_name)
     expect(page.current_path).to eq("/dashboards/search")
