@@ -16,7 +16,7 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  def self.search_by_name( name )
+  def self.search_by_name(name)
     names_array = name.split(' ')
 
     if names_array.size == 1
@@ -29,8 +29,11 @@ class User < ApplicationRecord
     end
   end
 
-  def follows_or_same?( athlete )
+  def follows_or_same?(athlete)
     friendships.map(&:friend).include?( athlete ) || self == athlete
   end
 
+  def current_friendship(friend)
+    friendships.where(friend: friend).first
+  end
 end
