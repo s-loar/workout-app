@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   self.per_page = 10
 
+  default_scope { order(last_name: :asc, first_name: :asc) }
+
   def full_name
     "#{first_name} #{last_name}"
   end
